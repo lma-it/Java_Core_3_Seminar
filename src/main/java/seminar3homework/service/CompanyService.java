@@ -9,23 +9,6 @@ import java.util.List;
 @Getter
 public class CompanyService {
 
-    public static List<Employee> fillEmployeesFromDBWithCEO(int boundsOfEmployees){
-
-        for (int i = 0; i < boundsOfEmployees; i++){
-            if(i == 0)
-                EmployeeService.addEmployee(new CEO(
-                        EmployeeDBService.getRandomBirthDate(),
-                        EmployeeDBService.getRandomName(),
-                        EmployeeDBService.getRandomSecondName(),
-                        EmployeeDBService.getRandomLastName(),
-                        EmployeeDBService.getRandomPhoneNumber(),
-                        EmployeeDBService.getRandomCEOSalary()));
-            else
-                EmployeeService.addEmployee(CompanyService.buildEmployee());
-        }
-        return EmployeeService.getEmployees();
-    }
-
     public static List<Employee> fillEmployeesFromDBWithoutCEO(int boundsOfEmployees){
 
         for (int i = 0; i < boundsOfEmployees; i++){

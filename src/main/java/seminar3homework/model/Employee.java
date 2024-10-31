@@ -35,32 +35,6 @@ public class Employee implements EmployeeComparator, Methods {
         return Objects.equals(hashCode(), other.hashCode());
     }
 
-    public Employee(Employee employee){
-        this.birthDate = employee.getBirthDate();
-        this.name = employee.getName();
-        this.secondName = employee.getSecondName();
-        this.lastName = employee.getLastName();
-        this.phoneNumber = employee.getPhoneNumber();
-        this.positionInCompany = employee.getPositionInCompany();
-        this.salary = employee.getSalary();
-    }
-
-    public Employee(LocalDate birthDay,
-                    String name,
-                    String secondName,
-                    String lastName,
-                    String phoneNumber,
-                    String position,
-                    int salary){
-        this.birthDate = birthDay;
-        this.name = name;
-        this.secondName = secondName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.positionInCompany = position;
-        this.salary = salary;
-    }
-
     public Employee(LocalDate birthDay,
                     String name,
                     String secondName,
