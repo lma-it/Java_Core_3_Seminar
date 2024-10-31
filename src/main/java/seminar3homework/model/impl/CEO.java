@@ -21,7 +21,7 @@ public class CEO extends Employee {
 
     }
 
-    public void upSalary(float percent, Employee employee){
+    public static void upSalary(float percent, Employee employee){
         if (!(employee instanceof CEO)) {
             int upperSalary = employee.getSalary();
             employee.setSalary((int) (upperSalary * percent));
