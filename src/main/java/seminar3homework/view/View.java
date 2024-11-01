@@ -26,7 +26,7 @@ public class View {
 
         while (true) {
 
-            isTipOn();
+            valueForTips();
             mainMenu();
             switch (Integer.parseInt(InputService.input("Ожидаем команду..."))){
                 // начало блока создания руководителя
@@ -466,10 +466,8 @@ public class View {
                         System.out.println("0. Выход");
                         switch (Integer.parseInt(InputService.input("Введите команду..."))) {
                             case 1 -> {
-                                tipOne = "";
-                                tipTwo = "";
-                                tipThree = "";
                                 isTip = false;
+                                valueForTips();
                             }
                             case 0 -> {
                             }
@@ -480,10 +478,8 @@ public class View {
                         System.out.println("0. Выход");
                         switch (Integer.parseInt(InputService.input("Введите команду..."))) {
                             case 1 -> {
-                                tipOne = "*";
-                                tipTwo = "**";
-                                tipThree = "***";
                                 isTip = true;
+                                valueForTips();
                             }
                             case 0 -> {
                             }
@@ -500,7 +496,7 @@ public class View {
 
     }
 
-    public static void isTipOn(){
+    private static void valueForTips(){
         if (isTip){
             tipOne = "(*)";
             tipTwo = "(**)";
